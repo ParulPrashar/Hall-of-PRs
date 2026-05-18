@@ -196,3 +196,5 @@ If this helped you:
 
 > Built with ❤️ to help beginners take their first step into open source
 
+## Intro
+This is my first PR project!
