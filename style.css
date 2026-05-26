@@ -57,7 +57,8 @@ header {
     cursor: pointer;
     color: white;
     /* BRAND GRADIENT */
-    background: linear-gradient(135deg, #7F5AF0, #2CB67D);
+   /* background: linear-gradient(135deg, #7F5AF0, #2CB67D); */
+   background: chocolate;
     transition: all 0.3s ease;
 }
 .cta-btn button:hover {
@@ -98,6 +99,7 @@ header {
     font-size: 2rem;
 
     background: linear-gradient(135deg, #7F5AF0, #2CB67D);
+   
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -106,12 +108,7 @@ header {
     color: #A1A1AA;
     margin-left: 5px;
 }
-.counter-number {
-    font-weight: 700;
-    background: linear-gradient(135deg, #7F5AF0, #2CB67D);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+
 .hero-cta button {
     padding: 0.7rem 1.5rem;
     border-radius: 10px;
@@ -120,7 +117,8 @@ header {
     font-weight: 600;
     cursor: pointer;
     color: white;
-    background: linear-gradient(135deg, #7F5AF0, #2CB67D);
+    background: #3604c7;
+   /* background: linear-gradient(135deg, #7F5AF0, #2CB67D); */
     transition: all 0.3s ease;
 }
 .hero-cta button:hover {
@@ -224,7 +222,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #7F5AF0, #2CB67D);
+    /*background: linear-gradient(135deg, #7F5AF0, #2CB67D);*/
+    background:#ff8c00 ;
     /* background: linear-gradient(135deg, #FFD700, #F59E0B);
     background: linear-gradient(135deg, #FDE68A, #F59E0B, #B45309); */
     margin: auto;
@@ -300,7 +299,8 @@ header {
     cursor: pointer;
     font-weight: 600;
     color: white;
-    background: linear-gradient(135deg, #7F5AF0, #2CB67D);
+   /* background: linear-gradient(135deg, #7F5AF0, #2CB67D);*/
+   background:chocolate;
     transition: 0.3s ease;
 }
 .popup-content button:hover {
@@ -339,7 +339,8 @@ header {
     font-size: 0.8rem;
     cursor: pointer;
     color: white;
-    background: linear-gradient(135deg, #7F5AF0, #2CB67D);
+    /*background: linear-gradient(135deg, #7F5AF0, #2CB67D); */
+    background: #3604c7;
     transition: 0.3s ease;
 }
 .celebrate-btn:hover {
