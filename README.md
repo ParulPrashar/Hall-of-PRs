@@ -7,6 +7,8 @@ This is a beginner-friendly open source project designed to help students make t
 ✨ Contribute → See your name live on a website → Share your achievement
 
 ---
+## My Contribution
+I am participating in GSSoC 🚀
 
 ## 🌐 Live Website
 
