@@ -51,6 +51,19 @@
 
 <section class="contributors-section">
     <h2 class="contributors-title">Contributors</h2>
+
+    <div class="search-wrapper">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input
+            type="text"
+            id="searchInput"
+            class="search-input"
+            placeholder="Search your name..."
+            oninput="searchName()"
+        >
+    </div>
+    <p id="noResults" class="no-results">No contributor found with that name.</p>
+
     <div class="contributors-grid">
         <!-- SAMPLE CARD (COPY THIS TEMPLATE) -->
 
