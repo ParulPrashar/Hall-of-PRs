@@ -53,3 +53,24 @@ window.addEventListener("load", () => {
     const count = cards.length;
     animateCounter(count);
 });
+
+function searchName() {
+    const query = document.getElementById("searchInput").value.trim().toLowerCase();
+    const cards = document.querySelectorAll(".card");
+    const noResults = document.getElementById("noResults");
+    let visibleCount = 0;
+
+    cards.forEach((card) => {
+        const nameEl = card.querySelector(".name");
+        const name = nameEl ? nameEl.textContent.trim().toLowerCase() : "";
+
+        if (name.includes(query)) {
+            card.style.display = "";
+            visibleCount++;
+        } else {
+            card.style.display = "none";
+        }
+    });
+
+    noResults.style.display = visibleCount === 0 ? "block" : "none";
+}
