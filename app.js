@@ -1,55 +1,131 @@
-function showPopup() {
-    document.getElementById("popup").style.display = "flex";
-}
-function closePopup() {
-    document.getElementById("popup").style.display = "none";
-}
+// =========================
+// DARK / LIGHT MODE
+// =========================
 
-function copyPost() {
-    const text = `🚀 I just made my FIRST Open Source Contribution!
+const themeToggle = document.createElement("button");
 
-From understanding GitHub to creating my first Pull Request — this feels unreal 🤯
+themeToggle.id = "theme-toggle";
 
-✅ My name is now LIVE on a real website
-✅ My GitHub graph just turned GREEN
-✅ And this is just the beginning!
+themeToggle.className = "theme-toggle";
 
-Huge thanks to @Parul Prashar for making this beginner-friendly 🚀
+themeToggle.innerHTML = `<i class="fa-solid fa-moon"></i>`;
 
-If you're starting out, THIS is your sign to begin.
+document.querySelector(".right-div").prepend(themeToggle);
 
-🔗 Check it out: https://parulprashar.github.io/Hall-of-PRs/
-🎥 Tutorial I followed: https://www.youtube.com/watch?v=DPShl8GWqS8
+themeToggle.addEventListener("click", () => {
 
-#FirstPR #OpenSource #GitHub #LearningInPublic`;
-    navigator.clipboard.writeText(text);
-    alert("Copied! Now paste it on LinkedIn 🚀");
-}
+    document.body.classList.toggle("light-mode");
+
+    const icon = themeToggle.querySelector("i");
+
+    if (document.body.classList.contains("light-mode")) {
+
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+
+    } else {
+
+        icon.classList.remove("fa-sun");
+        icon.classList.add("fa-moon");
+    }
+});
+
+
+// =========================
+// COUNTER ANIMATION
+// =========================
+
+const counter = document.getElementById("counter-number");
+
+let count = 0;
+
+const target = 249;
+
+const speed = 15;
 
 function updateCounter() {
-    const cards = document.querySelectorAll(".card");
-    const count = cards.length;
 
-    const counterElement = document.getElementById("counter-number");
-    counterElement.textContent = count;
+    if (count < target) {
+
+        count++;
+
+        counter.innerText = count;
+
+        setTimeout(updateCounter, speed);
+
+    }
 }
 
-window.addEventListener("load", updateCounter);
-function animateCounter(finalCount) {
-    let current = 0;
-    const counterElement = document.getElementById("counter-number");
-    const interval = setInterval(() => {
-        current += Math.ceil(finalCount / 30);
-        if (current >= finalCount) {
-            current = finalCount;
-            clearInterval(interval);
-        }
-        counterElement.textContent = current;
-    }, 30);
-}
+updateCounter();
 
-window.addEventListener("load", () => {
-    const cards = document.querySelectorAll(".card");
-    const count = cards.length;
-    animateCounter(count);
+
+// =========================
+// CARD ANIMATION
+// =========================
+
+const cards = document.querySelectorAll(".card");
+
+cards.forEach((card) => {
+
+    card.addEventListener("mouseenter", () => {
+
+        card.style.transform = "translateY(-10px) scale(1.03)";
+    });
+
+    card.addEventListener("mouseleave", () => {
+
+        card.style.transform = "translateY(0px)";
+    });
+});
+
+
+// =========================
+// RIPPLE BUTTON EFFECT
+// =========================
+
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach((button) => {
+
+    button.addEventListener("click", function (e) {
+
+        let x = e.clientX - e.target.offsetLeft;
+
+        let y = e.clientY - e.target.offsetTop;
+
+        let ripple = document.createElement("span");
+
+        ripple.style.left = `${x}px`;
+
+        ripple.style.top = `${y}px`;
+
+        ripple.classList.add("ripple");
+
+        this.appendChild(ripple);
+
+        setTimeout(() => {
+
+            ripple.remove();
+
+        }, 600);
+    });
+});
+
+
+// =========================
+// NAVBAR SCROLL EFFECT
+// =========================
+
+window.addEventListener("scroll", () => {
+
+    const header = document.querySelector("header");
+
+    if (window.scrollY > 30) {
+
+        header.style.boxShadow = "0 0 20px rgba(127,90,240,0.3)";
+
+    } else {
+
+        header.style.boxShadow = "none";
+    }
 });
