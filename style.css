@@ -216,6 +216,35 @@ header {
     margin-bottom: 1rem;
 }
 
+.social-links {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 16px 0 12px;
+}
+.social-links a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    transition: transform .15s ease, border-color .15s ease;
+}
+.social-links a:hover {
+    transform: translateY(-2px);
+    border-color: #7c5cff;
+}
+.social-links svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
 /* MEDAL */
 .medal {
     width: 60px;
