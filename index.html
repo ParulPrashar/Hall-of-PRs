@@ -51,6 +51,27 @@
 
 <section class="contributors-section">
     <h2 class="contributors-title">Contributors</h2>
+     <!-- Search Bar: Issue #624 -->
+    <div class="search-container">
+        <input
+            type="search"
+            id="contributor-search"
+            class="search-input"
+            placeholder="Search by name or GitHub username..."
+            aria-label="Search contributors by name or GitHub username"
+            autocomplete="off"
+        />
+        <span class="search-icon" aria-hidden="true">⌕</span>
+    </div>
+
+    <p
+        id="search-results"
+        class="search-results"
+        aria-live="polite"
+    ></p>
+
+
+
     <div class="contributors-grid">
         <!-- SAMPLE CARD (COPY THIS TEMPLATE) -->
 
@@ -74,13 +95,14 @@
                 <p class="badge-text">FIRST PR</p>
             </div>
 
-            <h2 class="name">Parul Prashar</h2>
+            <h2 id="owner" class="name">Parul Prashar</h2>
             <p class="bio">From tutorials to real action 💻🔥</p>
             <p class="credit">#FirstPR with Parul Prashar</p>
             <button class="celebrate-btn" onclick="showPopup()">
               Celebrate 🎉
             </button>
         </div>
+
         
         <div class="card">
             <div class="badge">
@@ -6865,7 +6887,7 @@
                 <p class="badge-text">FIRST PR</p>
             </div>
 
-            <h2 class="name">XXX</h2>
+            <h2 class="name">Code Buddie</h2>
             <p class="bio">I made progress today 📈✨</p>
             <p class="credit">#FirstPR with Parul Prashar</p>
             <button class="celebrate-btn" onclick="showPopup()">
@@ -6886,7 +6908,19 @@
               Celebrate 🎉
             </button>
         </div>
+        <div class="card">
+            <div class="badge">
+                <div class="medal"><span class="number">1</span></div>
+                <p class="badge-text">FIRST PR</p>
+            </div>
 
+            <h2 class="name">Robin Poonia</h2>
+            <p class="bio">Turning ideas into code, one contribution at a time 🚀</p>
+            <p class="credit">#FirstPR with Parul Prashar</p>
+            <button class="celebrate-btn" onclick="showPopup()">
+                Celebrate 🎉
+            </button>
+        </div>
         <!-- END: ADD YOUR CARD ABOVE THIS LINE -->
     </div>
 </section>
