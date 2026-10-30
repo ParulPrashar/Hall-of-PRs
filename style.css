@@ -378,3 +378,72 @@ header {
 .footer {
     border-bottom: 1px solid rgba(255,255,255,0.1);
 }
+
+/* CONTRIBUTOR SEARCH - ISSUE #624 */
+
+.search-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 1.5rem;
+}
+
+.search-input {
+    width: 100%;
+    padding: 14px 45px 14px 18px;
+
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+
+    color: #FFFFFF;
+    font-size: 1rem;
+
+    outline: none;
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.search-input::placeholder {
+    color: #A1A1AA;
+}
+
+.search-input:focus {
+    border-color: #7F5AF0;
+    box-shadow: 0 0 12px rgba(127, 90, 240, 0.25);
+}
+
+.search-icon {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    color: #A1A1AA;
+    font-size: 1.5rem;
+    pointer-events: none;
+}
+
+.search-results {
+    color: #A1A1AA;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    min-height: 1.2em;
+}
+
+/* Keep hidden cards out of the grid */
+.card[hidden] {
+    display: none;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 500px) {
+    .search-container {
+        max-width: 100%;
+    }
+
+    .search-input {
+        font-size: 0.9rem;
+        padding: 12px 40px 12px 14px;
+    }
+}
