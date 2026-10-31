@@ -51,6 +51,19 @@
 
 <section class="contributors-section">
     <h2 class="contributors-title">Contributors</h2>
+
+    <!--Search Bar-->
+    <div class="search-container">
+    <input
+        type="text"
+        id="contributor-search"
+        placeholder="Search contributors by name..."
+        aria-label="Search contributors by name"
+    >
+    </div>
+    <p id = "no-results" hidden>
+        No contributors found with that name.
+    </p>
     <div class="contributors-grid">
         <!-- SAMPLE CARD (COPY THIS TEMPLATE) -->
 
@@ -6887,6 +6900,19 @@
             </button>
         </div>
 
+           <div class="card">
+            <div class="badge">
+                <div class="medal"><span class="number">1</span></div>
+                <p class="badge-text">FIRST PR</p>
+            </div>
+
+            <h2 class="name">LOKESH</h2>
+            <p class="bio">There is much to goo🚀✨</p>
+            <p class="credit">#FirstPR with Parul Prashar</p>
+            <button class="celebrate-btn" onclick="showPopup()">
+              Celebrate 🎉
+            </button>
+    </div>
         <!-- END: ADD YOUR CARD ABOVE THIS LINE -->
     </div>
 </section>
